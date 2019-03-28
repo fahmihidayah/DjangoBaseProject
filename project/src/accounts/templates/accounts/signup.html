@@ -1,4 +1,4 @@
-{% extends "accounts/auth_base.html" %}
+{% extends "adminlte/login.html" %}
 
 {% load crispy_forms_tags %}
 
@@ -6,7 +6,7 @@
 
 {% block form_heading %}Signing Up is Free{% endblock %}
 
-{% block form %}
+{% block login_form %}
   {% crispy form %}
 
   <div class="form-message">
@@ -14,5 +14,5 @@
       Already signed up? <a href="{% url 'accounts:login' %}">Log in</a>.
     </p>
   </div>
-{% endblock form %}
+{% endblock login_form %}
 
