@@ -2,9 +2,11 @@
 
 {% block title %}Admin{% endblock %}
 {% load static %}
-{% block nav_sidebar %}
 
+{% block nav_sidebar %}
 {% endblock %}
+
+{% block change_password_url %}{% url 'accounts:password-change' %}{% endblock %}
 
 {% block body %}
 
