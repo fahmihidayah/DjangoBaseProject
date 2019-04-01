@@ -26,3 +26,4 @@ class BaseProfile(models.Model):
 class Profile(BaseProfile):
     def __str__(self):
         return "{}'s profile".format(self.user)
+

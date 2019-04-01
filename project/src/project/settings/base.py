@@ -78,6 +78,7 @@ INSTALLED_APPS = (
     "easy_thumbnails",
     "profiles",
     "accounts",
+    'location',
 )
 
 MIDDLEWARE = [

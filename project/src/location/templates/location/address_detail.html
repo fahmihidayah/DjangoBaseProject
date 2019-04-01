@@ -1,0 +1,49 @@
+{% extends "location/base.html" %}
+{% load static %}
+{% block body_content %}
+<p><a class="btn btn-default" href="{% url 'location_address_list' %}">Address Listing</a></p>
+<table class="table">
+    <tr>
+        <td>street_name</td>
+        <td>{{ object.street_name }}</td>
+    </tr>
+    <tr>
+        <td>slug</td>
+        <td>{{ object.slug }}</td>
+    </tr>
+    <tr>
+        <td>created</td>
+        <td>{{ object.created }}</td>
+    </tr>
+    <tr>
+        <td>last_updated</td>
+        <td>{{ object.last_updated }}</td>
+    </tr>
+    <tr>
+        <td>rt</td>
+        <td>{{ object.rt }}</td>
+    </tr>
+    <tr>
+        <td>rw</td>
+        <td>{{ object.rw }}</td>
+    </tr>
+    <tr>
+        <td>longitude</td>
+        <td>{{ object.longitude }}</td>
+    </tr>
+    <tr>
+        <td>latitude</td>
+        <td>{{ object.latitude }}</td>
+    </tr>
+    <tr>
+        <td>postal_code</td>
+        <td>{{ object.postal_code }}</td>
+    </tr>
+    <tr>
+        <td>building_number</td>
+        <td>{{ object.building_number }}</td>
+    </tr>
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Edit Address</a>
+
+{% endblock %}

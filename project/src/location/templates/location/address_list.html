@@ -1,0 +1,36 @@
+{% extends "location/base.html" %}
+{% load static %}
+{% block body_content %}
+<p><a class="btn btn-default" href="{% url 'location_address_list' %}">Address Listing</a></p>
+<table class="table">
+<tr>
+<td>ID</td><td>Link</td>
+    <td>street_name</td>
+    <td>slug</td>
+    <td>created</td>
+    <td>last_updated</td>
+    <td>rt</td>
+    <td>rw</td>
+    <td>longitude</td>
+    <td>latitude</td>
+    <td>postal_code</td>
+    <td>building_number</td>
+</tr>
+{% for object in object_list %}
+<tr>
+    <td>{{object.pk}}</td>
+    <td><a href="{{object.get_absolute_url}}">{{object}}</a></td>
+    <td>{{ object.street_name }}</td>
+    <td>{{ object.slug }}</td>
+    <td>{{ object.created }}</td>
+    <td>{{ object.last_updated }}</td>
+    <td>{{ object.rt }}</td>
+    <td>{{ object.rw }}</td>
+    <td>{{ object.longitude }}</td>
+    <td>{{ object.latitude }}</td>
+    <td>{{ object.postal_code }}</td>
+    <td>{{ object.building_number }}</td>
+</tr>
+{% endfor %}
+</table><a class="btn btn-primary" href="{% url 'location_address_create' %}">Create new Address</a>
+{% endblock %}
